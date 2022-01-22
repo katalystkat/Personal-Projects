@@ -1,0 +1,51 @@
+from turtle import Turtle
+import random
+
+COLORS = [[[188, 133, 26], [182, 104, 12]], [[138, 39, 28], [237, 101, 29]], [[92, 32, 36], [40, 10, 5]],
+         [[218, 229, 126], [232, 123, 25]], [[232, 123, 25], [234, 204, 172]], [[186, 62, 12], [237, 198, 135]], [[206, 107, 46], [176, 38, 26]], [[240, 221, 190], [205, 133, 28]], [[202, 204, 127], [240, 227, 194]]]
+
+#COLORS = [[(166, 80, 36), (141, 170, 160)], [(195, 157, 98), (125, 183, 197)], [(182, 223, 236), (180, 142, 50)], [(147, 31, 11), (196, 225, 217)], [(221, 205, 119), (233, 220, 188)], [(154, 206, 219), (209, 97, 57)], [(91, 115, 102), (103, 23, 5)], [(172, 203, 192), (109, 139, 130)], [(70, 116, 125), (94, 143, 150)], [(99, 75, 15), (34, 53, 36)], [(139, 71, 76), (136, 27, 32)], [(18, 55, 61), (177, 152, 158)], [(230, 217, 221), (231, 176, 159)], [(49, 74, 58), (32, 76, 86)], [(178, 102, 107), (91, 21, 27)]]
+
+class Dots(Turtle):
+    def __init__(self):
+        super().__init__()
+        self.start_dots()
+        self.new_dot = None
+
+
+
+    def new_dots_a(self, color_a, x, y):
+
+        self.new_dot = Turtle(shape="circle")
+        self.new_dot.penup()
+        self.new_dot.setposition(x, y)
+        random_stretch = random.uniform(1, 3)
+        self.new_dot.shapesize(random_stretch, random_stretch)
+        self.new_dot.color(color_a)
+
+
+    def new_dots_b(self, color_b, x, y):
+        self.new_dot= Turtle(shape="circle")
+        self.new_dot.penup()
+        self.new_dot.setposition(x, y)
+        new_shapesize = random.uniform(0.5, 0.8)
+        self.new_dot.shapesize(new_shapesize, new_shapesize)
+        self.new_dot.color(color_b)
+
+    def refresh_color(self):
+        random_color_pair = COLORS[random.randrange(0, len(COLORS) - 1)]
+        random_color_pair_a = random_color_pair[0]
+        random_color_pair_b = random_color_pair[1]
+
+    def location_expansion(self):
+        random_x = random.randint(-280, 280)
+        random_y = random.randint(-280, 280)
+
+    def start_dots(self):
+        random_color_pair = COLORS[random.randrange(0, len(COLORS) - 1)]
+        random_color_pair_a = random_color_pair[0]
+        random_color_pair_b = random_color_pair[1]
+        random_x = random.randint(-280, 280)
+        random_y = random.randint(-280, 280)
+        self.new_dots_a(color_a=random_color_pair_a, x=random_x, y=random_y)
+        self.new_dots_b(color_b=random_color_pair_b, x=random_x, y=random_y)
