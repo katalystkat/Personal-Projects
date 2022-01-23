@@ -1,0 +1,5 @@
+# Personal-Projects
+
+# Hello! Welcome to my Personal Projects Repository! I've made this repository to showcase some of my own little "fun" projects that I wanted to develop as a ways to practice the different skillsets I've accumulated thus far in my Coding Journey. These projects are separate from the coding assignments from online bootcamps or courses that I'm currently in. I hope these projects bring you a similar sense of joy and creativity as they have brought me. 
+
+# "Chihuly Art Project" : This is a project that I started at day 20 of my 100DaysOfCode (Python) as a means to practice my Object-Oriented Programming skills. I was reminiscing through photos from the summer and was admiring the "Glass House" exhibit at the Chihuly Glass and Gardens and it slowly clicked in my head how I may be able to replicate this artpiece via turtle/dot art! Every iteration of the script will generate a truly unique version of my "Dot House" with colors and shapes inspired by the actual glass house itself. I hope you enjoy generating your own "dot house" from my template! 
